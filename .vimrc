@@ -95,3 +95,6 @@ set imsearch=0
 
 " マウス
 set mouse=a
+
+" シンタックス
+syntax on
