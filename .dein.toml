@@ -106,3 +106,6 @@ repo = 'dag/vim-fish'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'kannokanno/previm'
