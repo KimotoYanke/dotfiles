@@ -32,6 +32,11 @@ endif
 
 [[plugins]] # 非同期処理
 repo = 'Shougo/vimproc.vim'
+hook_add = '''
+if !dein#util#_is_windows()
+  let g:vimproc#dll_path = g:dein_dir . '/repos/github.com/Shougo/vimproc.vim/lib/vimproc_linux64.so'
+endif
+'''
 hook_post_update = '''
 if dein#util#_is_windows()
   let cmd = 'tools\\update-dll-mingw'
@@ -73,8 +78,8 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 repo = 'mhinz/vim-startify'
 hook_add = '''
-  let g:startify_custom_header =
-    \ ['','']+map(split(system('env LC_ALL="en_US.utf8" date +"%Y/%m/%d %a" | figlet'), '\n'), '"   ". v:val')
+let g:startify_custom_header =
+  \ ['','']+map(split(system('env LC_ALL="en_US.utf8" date +"%Y/%m/%d %a" | figlet'), '\n'), '"   ". v:val')
 '''
 
 [[plugins]]
@@ -109,3 +114,6 @@ repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'kannokanno/previm'
+hook_add = '''
+let g:previm_open_cmd = 'xdg-open'
+'''
