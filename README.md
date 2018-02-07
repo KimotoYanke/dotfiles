@@ -1,1 +1,4 @@
 # dotfiles
+## Dependencies
+- fish
+- git
