@@ -1,6 +1,6 @@
 #!/bin/fish
 
-DOTFILES_PATH = ~/dotfiles
+export DOTFILES_PATH = ~/dotfiles
 
 git clone --recursive "$GITHUB_URL" "DOTFILES_PATH"
 
