@@ -127,3 +127,6 @@ let g:previm_open_cmd = 'xdg-open'
 
 [[plugins]]
 repo = 'equalsraf/neovim-gui-shim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
