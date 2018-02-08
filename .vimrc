@@ -18,9 +18,13 @@ endif
 let &runtimepath = g:dein_repo_dir .",". &runtimepath
 " プラグイン読み込み＆キャッシュ作成
 let s:toml_file = expand('~/.dein.toml')
+let s:toml_local_file = expand('~/.dein.local.toml')
 if dein#load_state(g:dein_dir)
   call dein#begin(g:dein_dir)
   call dein#load_toml(s:toml_file)
+  if filereadable(s:toml_local_file)
+    call dein#load_toml(s:toml_local_file)
+  endif
   call dein#end()
   call dein#save_state()
 endif
