@@ -67,6 +67,8 @@ set showmatch
 set laststatus=2
 " コマンドラインの補完
 set wildmode=list:longest
+" ラップなし
+set nowrap
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
@@ -77,6 +79,8 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+" インデント
+filetype plugin indent on
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する

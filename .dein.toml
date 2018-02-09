@@ -130,3 +130,18 @@ repo = 'equalsraf/neovim-gui-shim'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+nnoremap <C-f> :NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+'''
+
+[[plugins]]
+repo = 'syntax-vim-ex'
