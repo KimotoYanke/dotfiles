@@ -1,5 +1,14 @@
+# dein
 [[plugins]]
 repo = 'Shougo/dein.vim'
+
+# Theme
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+set background=dark
+au MyAutoCmd VimEnter * nested colorscheme hybrid
+'''
 
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
@@ -10,16 +19,6 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
-hook_add = '''
-set background=dark
-" colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
-" 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
-au MyAutoCmd VimEnter * nested colorscheme hybrid
-'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -59,6 +58,12 @@ let g:dein#plugin.build = cmd
 
 [[plugins]]
 repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_fixers = {
+      \ 'javascript': ['eslint', 'prettier_standard']
+      \ }
+let g:ale_fix_on_save = 1
+'''
 
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
@@ -86,7 +91,7 @@ repo = 'tomtom/tcomment_vim'
 repo = 'mhinz/vim-startify'
 hook_add = '''
 let g:startify_custom_header =
-  \ ['','']+map(split(system('env LC_ALL="en_US.utf8" date +"%Y/%m/%d %a" | figlet'), '\n'), '"   ". v:val')
+      \ ['','']+map(split(system('env LC_ALL="en_US.utf8" date +"%Y/%m/%d %a" | figlet'), '\n'), '"   ". v:val')
 '''
 
 [[plugins]]
@@ -144,4 +149,19 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 '''
 
 [[plugins]]
-repo = 'syntax-vim-ex'
+repo = 'rafi/vim-denite-mpc'
+depends = 'Shougo/denite.nvim'
+hook_add = '''
+'''
+
+[[plugins]]
+repo = 'vim-jp/syntax-vim-ex'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
