@@ -1,4 +1,5 @@
-set -x PATH $PATH "/home/adam/.gem/ruby/2.5.0/bin"
+set -x PATH $PATH "/home/adam/.gem/ruby/2.5.0/bin" "/home/adam/.nimble/bin" "/home/adam/emsdk-portable"
+
 function nico-mpv 
   argparse -n nico-mpv 'u/username=' 'v/video=' -- $argv
 

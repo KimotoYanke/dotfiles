@@ -60,7 +60,8 @@ let g:dein#plugin.build = cmd
 repo = 'w0rp/ale'
 hook_add = '''
 let g:ale_fixers = {
-      \ 'javascript': ['eslint', 'prettier_standard']
+      \ 'javascript': ['prettier_standard', 'eslint',],
+      \ 'typescript': ['tslint']
       \ }
 let g:ale_fix_on_save = 1
 '''
@@ -165,3 +166,15 @@ repo = 'posva/vim-vue'
 
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'zah/nim.vim'
+
+[[plugins]]
+repo = 'alunny/pegjs-vim'
