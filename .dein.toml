@@ -59,8 +59,12 @@ let g:dein#plugin.build = cmd
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
+let g:ale_linters = {
+      \ 'javascript': ['flow']
+      \ }
 let g:ale_fixers = {
-      \ 'javascript': ['prettier_standard', 'eslint',],
+      \ 'javascript': ['eslint'],
+      \ 'json': ['prettier'],
       \ 'typescript': ['tslint']
       \ }
 let g:ale_fix_on_save = 1
@@ -97,6 +101,9 @@ let g:startify_custom_header =
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+'''
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
