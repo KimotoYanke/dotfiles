@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/env fish
 
 function loop
   if string match "*.git" $argv -q

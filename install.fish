@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/usr/bin/env fish
 
 set DOTFILES_PATH ~/dotfiles
 set GITHUB_URL https://github.com/KimotoYanke/dotfiles
